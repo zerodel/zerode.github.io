@@ -15,11 +15,13 @@ categories: bioconductor
 
 为此,来自于`Bioconductor`项目的`Biostrings`包提供了处理基因序列的功能.
 它可以用来读写以fasta格式存储的DNA/蛋白质的序列.
+
 用户通过它的一系列方便实用的函数,可以和处理普通字符串一样查询或者修改序列信息,
 并能直接在R中完成序列的比对之类的生物信息学操作.
 
 `BSgenome`包则是`Biostrings`包的进一步扩展,是对一个物种完整基因组的包装.
 比如 `BSgenome.Hsapiens.UCSC.hg38` 就是hg38版本的人类(Homo Sapiens)的基因组序列.
+
 `Bioconductor`已经提供常见模式生物的BSgenome包, 比如人/小鼠/酵母.用户可以直接下载使用.
 
 比如以下代码就可以把上述的人类基因组序列包安装好.
@@ -47,11 +49,13 @@ BiocManager::install("BSgenome.Hsapiens.UCSC.hg38")
 ### 准备基因组序列文件
 
 `BSgenome`需要的基因组序列文件是保存在同一文件夹下的多个fasta文件,
+
 其中每个fasta文件只能有一个序列,并且fasta文件名要对应序列名.
 
 比如在 [ftp://ftp.ensembl.org/pub/release-101/fasta/homo_sapiens/dna/](ftp://ftp.ensembl.org/pub/release-101/fasta/homo_sapiens/dna/) 可以下载人类基因组每个染色体对应的序列文件.
 
 记住这个文件夹的路径, seed文件中会用到.
+
 
 也可以使用单个2bit文件.但这里不再赘述.
 
@@ -60,7 +64,9 @@ BiocManager::install("BSgenome.Hsapiens.UCSC.hg38")
 这个seed文件包括了生成BSgenome包过程中所需的所有参数和说明.
 
 它是普通R包的DESCRIPION文件的扩展版本.
+
 其中除了R包相关的说明信息外, 还要指明基因组的相关信息.
+
 尤其是要指出刚刚准备好的基因组参考序列文件所在的文件夹路径.
 
 以下就是`BSgenome.Hsapiens.UCSC.hg19`的seed文件.
@@ -96,13 +102,17 @@ seqfile_name: hg19.2bit
 在序列文件和seed文件都准备好之后, 就可以在R中调用 **`BSgenome::forgeBSgenomeDataPkg(path/to/seed/file)`** 来生成一个代码包了.
 这个函数的参数就是seed文件的路径. 
 
+
 默认情况下这个代码包会出现在当前工作目录.(使用getwd函数可以查询R的当前工作目录).
+
 生成代码包的耗时根据基因组的规模的不同从几分钟到数小时不等.
 
 #### 命令行中编译生成的R代码包
 
 在运行完毕之后, 需要对代码包进行编译和安装.
+
 这个步骤**不在R环境中进行**, 而是在系统的命令行中完成, 比如 mac/linux 的shell, 或者windows的cmd命令行中.
+
 如果是windows用户的话, 需要修改自己PATH变量,把Rcmd.exe所在的文件夹添加进去.
 
 编译的命令如下:
