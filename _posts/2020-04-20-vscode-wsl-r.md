@@ -1,18 +1,18 @@
 ---
 layout: post
-title:  "如何在用vscode在WSL写R代码"
+title:  "如何使用vscode在WSL写R代码"
 date:   2020-04-20
 categories: [memo]
 ---
 
-- [如何在用vscode在WSL写R代码](#如何在用vscode在wsl写r代码)
+- [如何使用vscode在WSL写R代码](#如何使用vscode在wsl写r代码)
   - [为何要使用WSL](#为何要使用wsl)
   - [VSCode使用R](#vscode使用r)
   - [如何在WSL使用vscode中的R?](#如何在wsl使用vscode中的r)
   - [如何在WSL环境中使用vscode](#如何在wsl环境中使用vscode)
     - [绘图问题.](#绘图问题)
 
-# 如何在用vscode在WSL写R代码
+# 如何使用vscode在WSL写R代码
 
 ## 为何要使用WSL
 
