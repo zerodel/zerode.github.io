@@ -5,6 +5,17 @@ date:   2020-09-19
 categories: bioconductor
 ---
 
+- [如何使用BSgenome来forge一个基因组](#如何使用bsgenome来forge一个基因组)
+  - [用来存储基因组序列的BSgenome](#用来存储基因组序列的bsgenome)
+  - [如何forge一个BSgenome包](#如何forge一个bsgenome包)
+    - [准备基因组序列文件](#准备基因组序列文件)
+    - [写seed文件](#写seed文件)
+    - [生成代码包并编译安装](#生成代码包并编译安装)
+      - [在R中生成代码包](#在r中生成代码包)
+      - [命令行中编译生成的R代码包](#命令行中编译生成的r代码包)
+
+# 如何使用BSgenome来forge一个基因组
+
 本文将简要说明R中用来保存基因组序列的`BSgenome`包,
 并介绍如何使用它的`forge`功能来把非模式生物的基因组打包.以方便他人使用.
 
