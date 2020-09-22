@@ -34,6 +34,10 @@ highlighter-theme: manni
 date_format: "%Y-%M-%D"
 plugins:
   - jekyll-feed
+# title: zerodel’s blog
+# description: Welcome to my blog
+# author: zerodel
+
 category_dir: category/
 tag_dir: tag/
 # Exclude from processing.
