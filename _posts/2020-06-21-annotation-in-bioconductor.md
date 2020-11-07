@@ -89,7 +89,7 @@ attr(,"package")
 
 > `select(x, keys, columns, keytype, ...)`  在确定了查询的列keytype, 查询的值keys, 和输出的列columns之后, 提取需要的信息
 
-由于数据可能存在冗余,不是所有的列都能用来查询,所以`keytypes` 和 `columns` 得到的结果不一定相同. 
+由于数据可能存在冗余,不是所有的列都能用来查询,所以`keytypes` 和 `columns` 得到的结果不一定相同. 还有一个通用的函数 `mapids`, 这个函数类似select, 但是只提取单独的列. 
 
 bioconductor的注释包可以分成以基因为中心(gene centric)或者以基因组为中心(genome centric)
 
